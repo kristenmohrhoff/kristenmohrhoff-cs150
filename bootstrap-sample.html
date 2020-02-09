@@ -12,15 +12,47 @@
   </head>
   
   <style>
-    nav {
-      align-content: center;
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 10px;
+        grid-column-gap: 15px;
+    }
+    
+    .header {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 1;
+      grid-row-end: span 1;
+    }
+    
+    .buttons {
+      grid-column-start: 1;
+      grid-column-end: span 2;
+      grid-row-start: 2;
+      grid-row-end: span 1;
+    }
+    
+    .leftpicture {
+      grid-column-start: 1;
+      grid-column-end: span 1;
+      grid-row-start: 3;
+      grid-row-end: span 1;
+    }
+    
+    .rightarea {
+      grid-column-start: 2;
+      grid-column-end: span 2;
+      grid-row-start: 3;
+      grid-row-end: span 1;
     }
     
   </style>
     
   <body>
-    <div class="container">
-      <header>
+    <div class="grid">
+      <div class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">Kristen Mohrhoff</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,24 +80,24 @@
            </form>
          </div>
        </nav>
-      </header>
-      <nav>
+      </div>
+      <div class="buttons">
         <button type="button" class="btn btn-outline-primary">Primary</button>
         <button type="button" class="btn btn-outline-secondary">Secondary</button>
         <button type="button" class="btn btn-outline-success">Tertiary</button>
         <button type="button" class="btn btn-outline-info">Quaternary</button>
         <button type="button" class="btn btn-outline-warning">Quinary</button>
         <button type="button" class="btn btn-outline-danger">Senary</button>
-      </nav>
-      <section class="left">
-        <h2>Left</h2>
-      </section>
-      <section class="right">
+      </div>
+      <div class="leftpicture">
+        <h2>This is me:</h2>
+      </div>
+      <div class="rightarea">
         <h2>Right</h2>
-      </section>
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+      </div>
+      <div class="footer>
+        <footer> <h1>Footer</h1></footer>
+      </div>
     </div>
     
     <!-- Optional JavaScript -->
